@@ -5,7 +5,11 @@
 
         {
             "label": "build-sandbox-Sandbox",
+<<<<<<< HEAD
             "command": "/usr/local/share/dotnet/dotnet",
+=======
+            "command": "dotnet",
+>>>>>>> d845c0640b5a1670ecf18b950fc3550c9b5f1364
             "type": "process",
             "args": [
                 "build",
@@ -18,7 +22,11 @@
 
         {
             "label": "build-csharp-prep-Prep1",
+<<<<<<< HEAD
             "command": "/usr/local/share/dotnet/dotnet",
+=======
+            "command": "dotnet",
+>>>>>>> d845c0640b5a1670ecf18b950fc3550c9b5f1364
             "type": "process",
             "args": [
                 "build",
@@ -31,7 +39,11 @@
 
         {
             "label": "build-csharp-prep-Prep2",
+<<<<<<< HEAD
             "command": "/usr/local/share/dotnet/dotnet",
+=======
+            "command": "dotnet",
+>>>>>>> d845c0640b5a1670ecf18b950fc3550c9b5f1364
             "type": "process",
             "args": [
                 "build",
@@ -44,7 +56,11 @@
 
         {
             "label": "build-csharp-prep-Prep3",
+<<<<<<< HEAD
             "command": "/usr/local/share/dotnet/dotnet",
+=======
+            "command": "dotnet",
+>>>>>>> d845c0640b5a1670ecf18b950fc3550c9b5f1364
             "type": "process",
             "args": [
                 "build",
@@ -57,7 +73,11 @@
 
         {
             "label": "build-csharp-prep-Prep4",
+<<<<<<< HEAD
             "command": "/usr/local/share/dotnet/dotnet",
+=======
+            "command": "dotnet",
+>>>>>>> d845c0640b5a1670ecf18b950fc3550c9b5f1364
             "type": "process",
             "args": [
                 "build",
@@ -70,7 +90,11 @@
 
         {
             "label": "build-csharp-prep-Prep5",
+<<<<<<< HEAD
             "command": "/usr/local/share/dotnet/dotnet",
+=======
+            "command": "dotnet",
+>>>>>>> d845c0640b5a1670ecf18b950fc3550c9b5f1364
             "type": "process",
             "args": [
                 "build",
@@ -83,7 +107,11 @@
 
         {
             "label": "build-prepare-Learning02",
+<<<<<<< HEAD
             "command": "/usr/local/share/dotnet/dotnet",
+=======
+            "command": "dotnet",
+>>>>>>> d845c0640b5a1670ecf18b950fc3550c9b5f1364
             "type": "process",
             "args": [
                 "build",
@@ -96,7 +124,11 @@
 
         {
             "label": "build-prepare-Learning03",
+<<<<<<< HEAD
             "command": "/usr/local/share/dotnet/dotnet",
+=======
+            "command": "dotnet",
+>>>>>>> d845c0640b5a1670ecf18b950fc3550c9b5f1364
             "type": "process",
             "args": [
                 "build",
@@ -109,7 +141,11 @@
 
         {
             "label": "build-prepare-Learning04",
+<<<<<<< HEAD
             "command": "/usr/local/share/dotnet/dotnet",
+=======
+            "command": "dotnet",
+>>>>>>> d845c0640b5a1670ecf18b950fc3550c9b5f1364
             "type": "process",
             "args": [
                 "build",
@@ -122,7 +158,11 @@
 
         {
             "label": "build-prepare-Learning05",
+<<<<<<< HEAD
             "command": "/usr/local/share/dotnet/dotnet",
+=======
+            "command": "dotnet",
+>>>>>>> d845c0640b5a1670ecf18b950fc3550c9b5f1364
             "type": "process",
             "args": [
                 "build",
@@ -135,7 +175,11 @@
 
         {
             "label": "build-prove-Develop02",
+<<<<<<< HEAD
             "command": "/usr/local/share/dotnet/dotnet",
+=======
+            "command": "dotnet",
+>>>>>>> d845c0640b5a1670ecf18b950fc3550c9b5f1364
             "type": "process",
             "args": [
                 "build",
@@ -148,7 +192,11 @@
 
         {
             "label": "build-prove-Develop03",
+<<<<<<< HEAD
             "command": "/usr/local/share/dotnet/dotnet",
+=======
+            "command": "dotnet",
+>>>>>>> d845c0640b5a1670ecf18b950fc3550c9b5f1364
             "type": "process",
             "args": [
                 "build",
@@ -161,7 +209,11 @@
 
         {
             "label": "build-prove-Develop04",
+<<<<<<< HEAD
             "command": "/usr/local/share/dotnet/dotnet",
+=======
+            "command": "dotnet",
+>>>>>>> d845c0640b5a1670ecf18b950fc3550c9b5f1364
             "type": "process",
             "args": [
                 "build",
@@ -174,7 +226,11 @@
 
         {
             "label": "build-prove-Develop05",
+<<<<<<< HEAD
             "command": "/usr/local/share/dotnet/dotnet",
+=======
+            "command": "dotnet",
+>>>>>>> d845c0640b5a1670ecf18b950fc3550c9b5f1364
             "type": "process",
             "args": [
                 "build",
@@ -187,7 +243,11 @@
 
         {
             "label": "build-final-FinalProject",
+<<<<<<< HEAD
             "command": "/usr/local/share/dotnet/dotnet",
+=======
+            "command": "dotnet",
+>>>>>>> d845c0640b5a1670ecf18b950fc3550c9b5f1364
             "type": "process",
             "args": [
                 "build",
@@ -200,7 +260,11 @@
 
         {
             "label": "build-final-Foundation1",
+<<<<<<< HEAD
             "command": "/usr/local/share/dotnet/dotnet",
+=======
+            "command": "dotnet",
+>>>>>>> d845c0640b5a1670ecf18b950fc3550c9b5f1364
             "type": "process",
             "args": [
                 "build",
@@ -213,7 +277,11 @@
 
         {
             "label": "build-final-Foundation2",
+<<<<<<< HEAD
             "command": "/usr/local/share/dotnet/dotnet",
+=======
+            "command": "dotnet",
+>>>>>>> d845c0640b5a1670ecf18b950fc3550c9b5f1364
             "type": "process",
             "args": [
                 "build",
@@ -226,7 +294,11 @@
 
         {
             "label": "build-final-Foundation3",
+<<<<<<< HEAD
             "command": "/usr/local/share/dotnet/dotnet",
+=======
+            "command": "dotnet",
+>>>>>>> d845c0640b5a1670ecf18b950fc3550c9b5f1364
             "type": "process",
             "args": [
                 "build",
@@ -239,7 +311,11 @@
 
         {
             "label": "build-final-Foundation4",
+<<<<<<< HEAD
             "command": "/usr/local/share/dotnet/dotnet",
+=======
+            "command": "dotnet",
+>>>>>>> d845c0640b5a1670ecf18b950fc3550c9b5f1364
             "type": "process",
             "args": [
                 "build",

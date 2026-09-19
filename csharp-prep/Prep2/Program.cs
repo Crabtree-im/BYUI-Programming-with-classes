@@ -1,12 +1,16 @@
 using System;
+<<<<<<< HEAD
 using System.Formats.Asn1;
 using System.Globalization;
 using System.Xml;
+=======
+>>>>>>> d845c0640b5a1670ecf18b950fc3550c9b5f1364
 
 class Program
 {
     static void Main(string[] args)
     {
+<<<<<<< HEAD
         Console.Write("What is your grade percentage? ");
         string userInput = Console.ReadLine();
         int gradePercentage = int.Parse(userInput);
@@ -68,5 +72,8 @@ class Program
         {
             Console.WriteLine("You did not pass the course. Try harder.");
         }
+=======
+        Console.WriteLine("Hello Prep2 World!");
+>>>>>>> d845c0640b5a1670ecf18b950fc3550c9b5f1364
     }
 }

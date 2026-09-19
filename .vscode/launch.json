@@ -2,6 +2,7 @@
 {
     "version": "0.2.0",
     "configurations": [
+<<<<<<< HEAD
         {
             "name": "C#: <project-name> Debug",
             "type": "dotnet",
@@ -13,6 +14,8 @@
             "type": "coreclr",
             "request": "attach"
         },
+=======
+>>>>>>> d845c0640b5a1670ecf18b950fc3550c9b5f1364
 
         {
             "name": "Sandbox Project",

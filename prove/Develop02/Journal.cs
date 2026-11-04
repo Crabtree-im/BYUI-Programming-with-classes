@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 
 public class Journal
 {
@@ -41,7 +40,12 @@ public class Journal
 
         try
         {
-            File.WriteAllLines(filename, _entries.Select(entry => entry.ToFileFormat()));
+            List<string> linesToWrite = new List<string>();
+            foreach (Entry entry in _entries)
+            {
+                linesToWrite.Add(entry.ToFileFormat());
+            }
+            File.WriteAllLines(filename, linesToWrite);
             Console.WriteLine($"Journal saved to {filename}\n");
         }
         catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or ArgumentException or NotSupportedException)
@@ -87,19 +91,35 @@ public class Journal
             return;
         }
 
-        int totalWords = _entries.Sum(entry => CountWords(entry.GetResponse()));
+        int totalWords = 0;
+        foreach (Entry entry in _entries)
+        {
+            totalWords += CountWords(entry.GetResponse());
+        }
+
         double averageWords = (double)totalWords / _entries.Count;
-        List<int> moodRatings = _entries
-            .Where(entry => entry.GetMoodRating() > 0)
-            .Select(entry => entry.GetMoodRating())
-            .ToList();
+
+        List<int> moodRatings = new List<int>();
+        foreach (Entry entry in _entries)
+        {
+            if (entry.GetMoodRating() > 0)
+            {
+                moodRatings.Add(entry.GetMoodRating());
+            }
+        }
 
         Console.WriteLine($"Entries: {_entries.Count}");
         Console.WriteLine($"Total words: {totalWords}");
         Console.WriteLine($"Average words per entry: {averageWords:F1}");
         if (moodRatings.Count > 0)
         {
-            Console.WriteLine($"Average recorded mood: {moodRatings.Average():F1}/5\n");
+            double averageMood = 0;
+            foreach (int mood in moodRatings)
+            {
+                averageMood += mood;
+            }
+            averageMood /= moodRatings.Count;
+            Console.WriteLine($"Average recorded mood: {averageMood:F1}/5\n");
         }
         else
         {

@@ -1,0 +1,51 @@
+@startuml Journal Program
+!theme plain
+
+class Program {
+    {static} Main(args: string[]): void
+    {static} WriteNewEntry(journal: Journal, promptGenerator: PromptGenerator): void
+    {static} TryReadMoodRating(out moodRating: int): bool
+    {static} SaveJournal(journal: Journal): void
+    {static} LoadJournal(journal: Journal): void
+}
+
+class Journal {
+    -_entries: List<Entry>
+    +Journal()
+    +AddEntry(entry: Entry): void
+    +DisplayAll(): void
+    +SaveToFile(filename: string): void
+    +LoadFromFile(filename: string): void
+    +DisplayStatistics(): void
+    -CountWords(text: string): int
+}
+
+class Entry {
+    -_prompt: string
+    -_response: string
+    -_date: string
+    -_moodRating: int
+    +Entry(prompt: string, response: string, moodRating: int)
+    +GetPrompt(): string
+    +GetResponse(): string
+    +GetDate(): string
+    +GetMoodRating(): int
+    +Display(): void
+    +ToFileFormat(): string
+    {static} FromFileFormat(line: string): Entry
+    -EscapeCsvField(field: string): string
+    -ParseCsvRecord(record: string): List<string>
+}
+
+class PromptGenerator {
+    -_prompts: List<string>
+    -_random: Random
+    +PromptGenerator()
+    +GetRandomPrompt(): string
+}
+
+Program --> Journal : uses
+Program --> PromptGenerator : uses
+Journal --> Entry : manages >
+PromptGenerator --> Entry : provides prompts for
+@enduml

@@ -1,5 +1,22 @@
 using System;
 
+// Mindfulness Program - Unit 04 Develop Activity
+// 
+// EXCEEDING REQUIREMENTS:
+// 1. Enhanced Animations: The base Activity class includes two types of animations:
+//    - A spinner animation (| / - \) that cycles through during pauses
+//    - A countdown timer that displays remaining seconds
+// 2. Extended Prompt Libraries: 
+//    - ReflectingActivity includes 5 reflection prompts and 9 follow-up questions
+//    - ListingActivity includes 7 diverse prompts covering different areas of strength
+// 3. Robust Duration Timing: Using DateTime.Now with TotalSeconds provides accurate
+//    timing that continues activities until the exact duration is reached, even if
+//    the individual segments don't divide evenly into the total time
+// 4. Clean Code Architecture: Proper encapsulation with private fields and protected
+//    helper methods in the base class reduces code duplication across activities
+// 5. User Experience Enhancements: Clear menu prompts, input validation on menu choice,
+//    and consistent formatting across all activities
+
 class Program
 {
     static void Main(string[] args)

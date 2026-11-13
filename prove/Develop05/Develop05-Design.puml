@@ -1,0 +1,86 @@
+@startuml Eternal Quest Class Diagram
+
+' Base Goal Class
+abstract class Goal {
+    # _name: string
+    # _description: string
+    # _points: int
+    
+    + Goal(name: string, description: string, points: int)
+    + GetName(): string
+    + GetDescription(): string
+    + GetPoints(): int
+    + {abstract} RecordEvent(): int
+    + {abstract} IsComplete(): bool
+    + {abstract} GetDisplayString(): string
+    + GetStringRepresentation(): string
+    + SetFromStringRepresentation(data: string): void
+}
+
+' Derived Goal Classes
+class SimpleGoal {
+    - _isComplete: bool
+    
+    + SimpleGoal(name: string, description: string, points: int)
+    + RecordEvent(): int
+    + IsComplete(): bool
+    + GetDisplayString(): string
+}
+
+class EternalGoal {
+    + EternalGoal(name: string, description: string, points: int)
+    + RecordEvent(): int
+    + IsComplete(): bool
+    + GetDisplayString(): string
+}
+
+class ChecklistGoal {
+    - _amountCompleted: int
+    - _targetAmount: int
+    - _bonusPoints: int
+    
+    + ChecklistGoal(name: string, description: string, points: int, targetAmount: int, bonusPoints: int)
+    + RecordEvent(): int
+    + IsComplete(): bool
+    + GetDisplayString(): string
+    + GetAmountCompleted(): int
+    + GetTargetAmount(): int
+}
+
+' Manager Classes
+class GoalManager {
+    - _goals: List<Goal>
+    - _score: int
+    - _fileName: string
+    
+    + GoalManager()
+    + AddGoal(goal: Goal): void
+    + RecordGoalEvent(goalIndex: int): int
+    + GetGoals(): List<Goal>
+    + GetScore(): int
+    + AddToScore(points: int): void
+    + SaveGoals(): void
+    + LoadGoals(): void
+    + GetGoalForDisplay(index: int): string
+}
+
+class Program {
+    - {static} _goalManager: GoalManager
+    
+    + {static} Main(args: string[]): void
+    - {static} DisplayMenu(): int
+    - {static} CreateNewGoal(): void
+    - {static} RecordGoalEvent(): void
+    - {static} ListGoals(): void
+    - {static} SaveAndQuit(): void
+}
+
+' Relationships
+Goal <|-- SimpleGoal
+Goal <|-- EternalGoal
+Goal <|-- ChecklistGoal
+
+GoalManager --> Goal : manages
+Program --> GoalManager : uses
+
+@enduml

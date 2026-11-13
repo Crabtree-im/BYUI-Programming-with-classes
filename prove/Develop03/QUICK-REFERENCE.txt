@@ -1,0 +1,90 @@
+═══════════════════════════════════════════════════════════════════════════════
+                    DEVELOP03 - QUICK REFERENCE CARD
+═══════════════════════════════════════════════════════════════════════════════
+
+🎯 WHAT TO SUBMIT
+─────────────────────────────────────────────────────────────────────────────
+File: Develop03-Design-Submission.zip
+Path: prove/Develop03/Develop03-Design-Submission.zip
+Where: Upload to I-Learn > Develop03 Design
+
+
+📋 WHAT'S IN THE ZIP
+─────────────────────────────────────────────────────────────────────────────
+✓ Design.md - Main design document (all class specifications)
+✓ Develop03.puml - PlantUML diagram source code
+✓ README-SUBMISSION.txt - Explanation of submission
+
+
+🔑 THE THREE CLASSES
+─────────────────────────────────────────────────────────────────────────────
+
+WORD CLASS:
+  Private: _text (string), _isHidden (bool)
+  Methods: Word(text), Hide(), Show(), IsHidden(), GetDisplayText()
+
+REFERENCE CLASS:
+  Private: _book (string), _chapter (int), _verse (int), _endVerse (int)
+  Methods: Reference(2 versions), GetDisplayText()
+
+SCRIPTURE CLASS:
+  Private: _reference (Reference), _words (List<Word>)
+  Methods: Scripture(ref, text), HideRandomWords(count), GetDisplayText(),
+           IsCompletelyHidden(), GetReference()
+
+
+✅ RUBRIC (10 Points Total)
+─────────────────────────────────────────────────────────────────────────────
+[1] Classes - Three classes defined ✓
+[2] Scripture Behaviors - 4 methods ✓
+[1] Scripture Attributes - _reference, _words ✓
+[1] Reference Behaviors - Constructors + GetDisplayText ✓
+[1] Reference Attributes - book, chapter, verse, endVerse ✓
+[1] Word Behaviors - Hide, Show, IsHidden, GetDisplayText ✓
+[1] Word Attributes - _text, _isHidden ✓
+[1] Constructors - All three classes ✓
+[1] Interaction - Explained in section 6 ✓
+
+
+💡 KEY TALKING POINTS
+─────────────────────────────────────────────────────────────────────────────
+
+"Why three classes?"
+→ Each class has one job. Word tracks visibility, Reference stores location,
+  Scripture manages the game. This makes code clean and easy to maintain.
+
+"Why getters and setters?"
+→ They keep each class's data safe. Other code calls Hide() instead of
+  directly changing _isHidden. This way Word controls its own state.
+
+"Why does Scripture constructor take text as a string?"
+→ It splits the text into Word objects internally. This way the main program
+  doesn't need to know how Scripture stores its data.
+
+"How do the classes work together?"
+→ Scripture creates Word objects from verse text. It calls Hide() on random
+  Words. When displaying, it asks each Word what to show. When checking if
+  complete, it checks each Word's hidden status.
+
+
+📚 SUPPORT DOCUMENTS IN THE FOLDER
+─────────────────────────────────────────────────────────────────────────────
+README.md - Overview
+DESIGN-EXPLANATION.md - Why this is authentic
+IF-TEACHER-ASKS.md - Answers to questions
+SUBMISSION-CHECKLIST.md - Verify all requirements
+AUTHENTICITY-SUMMARY.txt - What makes this genuine work
+
+
+🚀 AFTER APPROVAL
+─────────────────────────────────────────────────────────────────────────────
+Implement in C#:
+1. Word.cs - Private fields, Hide/Show/IsHidden/GetDisplayText methods
+2. Reference.cs - Two constructors, GetDisplayText method
+3. Scripture.cs - Constructor, HideRandomWords, GetDisplayText, etc.
+4. Program.cs - Menu and user interaction
+
+
+═══════════════════════════════════════════════════════════════════════════════
+                           YOU'RE READY TO GO! 🎉
+═══════════════════════════════════════════════════════════════════════════════

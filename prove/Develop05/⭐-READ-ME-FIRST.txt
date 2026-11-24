@@ -1,0 +1,53 @@
+🎯 W09 DESIGNER SUBMISSION - WHAT YOU NEED TO SUBMIT
+
+FILE TO UPLOAD: W09-DESIGN-SUBMISSION.md
+
+═════════════════════════════════════════════════════════════════════════════
+
+📤 HOW TO SUBMIT:
+
+1. Go to I-Learn
+2. Navigate to: CSE 210 → W09 Designer
+3. Click: "Submit Assignment"
+4. Upload: W09-DESIGN-SUBMISSION.md
+5. Click: Submit
+
+═════════════════════════════════════════════════════════════════════════════
+
+✅ WHAT'S IN THE FILE:
+
+• Professional PlantUML class diagram (rendered image)
+• All 6 classes documented (Goal, SimpleGoal, EternalGoal, ChecklistGoal, 
+  GoalManager, Program)
+• All attributes with types
+• All methods with parameters and return types
+• All constructors
+• Detailed interaction and program flow diagrams
+• All 8 rubric requirements fully addressed
+
+═════════════════════════════════════════════════════════════════════════════
+
+🎓 RUBRIC COVERAGE:
+
+Classes & Inheritance (2 pts)              ✅
+Method Overriding (1 pt)                   ✅
+Base Class Behaviors (2 pts)               ✅
+Base Class Attributes (1 pt)               ✅
+Derived Class Behaviors (1 pt)             ✅
+Derived Class Attributes (1 pt)            ✅
+Constructors (1 pt)                        ✅
+Interaction (1 pt)                         ✅
+─────────────────────────────────────────────
+TOTAL: 10/10 points ✅
+
+═════════════════════════════════════════════════════════════════════════════
+
+🔗 FILE LOCATION:
+
+/prove/Develop05/W09-DESIGN-SUBMISSION.md
+
+═════════════════════════════════════════════════════════════════════════════
+
+Expected Grade: 10/10 ✅
+
+Ready to submit!

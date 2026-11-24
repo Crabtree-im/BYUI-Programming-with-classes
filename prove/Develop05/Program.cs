@@ -1,6 +1,44 @@
 using System;
 using System.Collections.Generic;
 
+// ETERNAL QUEST PROGRAM - EXCEEDS REQUIREMENTS
+// 
+// This program demonstrates polymorphism through a goal-tracking system with 
+// gamification features that exceed the core requirements:
+//
+// ENHANCEMENTS BEYOND CORE REQUIREMENTS:
+// 1. PERSISTENT SESSION DATA: The program automatically saves all goals and 
+//    the user's total score to a file (goals.txt) and loads them on startup.
+//    This allows users to continue their quest across multiple sessions without
+//    losing progress. The save/load functionality uses a custom serialization
+//    format with polymorphic deserialization.
+//
+// 2. AUTOMATIC BONUS CALCULATION: ChecklistGoal automatically calculates and 
+//    awards bonus points when the target is reached. Users see immediate 
+//    feedback showing both the base points and bonus points in the same message.
+//
+// 3. VISUAL STATUS INDICATORS: The program uses checkbox notation ([X] and [ ])
+//    to visually indicate goal completion status. For checklist goals, it shows
+//    progress as "Completed X/Y times" for intuitive progress tracking.
+//
+// 4. COMPREHENSIVE USER INTERFACE: The menu-driven interface provides clear
+//    options and feedback at every step. Score is displayed in a banner at the
+//    top of each screen for constant visibility. Users see congratulatory
+//    messages with specific point values when recording achievements.
+//
+// 5. POLYMORPHIC PERSISTENCE: The goal-loading system demonstrates polymorphism
+//    by using a factory pattern in GoalManager.CreateGoalFromString() that
+//    correctly deserializes each goal type and restores its complete state.
+//
+// DESIGN PRINCIPLES DEMONSTRATED:
+// - Inheritance: All goal types inherit from abstract Goal base class
+// - Polymorphism: Each goal type overrides RecordEvent(), IsComplete(), and
+//   GetDisplayString() with type-specific behavior
+// - Encapsulation: All data members are private/protected; access is controlled
+//   through public methods
+// - Abstraction: The base Goal class defines the interface; concrete types
+//   implement specific behaviors
+
 class Program
 {
     private static GoalManager _goalManager;
